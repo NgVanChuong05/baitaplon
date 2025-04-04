@@ -117,67 +117,18 @@
             background-color: var(--primary-color);
         }
         
-        /* Hero Banner */
-        .hero-section {
-            position: relative;
-            height: 600px;
-            overflow: hidden;
-        }
+     
+       
         
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+      
         
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            width: 100%;
-            padding: 0 20px;
-        }
         
-        .hero-content h1 {
-            font-size: 60px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
         
-        .hero-content p {
-            font-size: 22px;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+       
         
-        .btn-hero {
-            background-color: var(--primary-color);
-            border: none;
-            padding: 12px 40px;
-            font-size: 18px;
-            font-weight: 500;
-            border-radius: 30px;
-            transition: all 0.3s;
-        }
-        
-        .btn-hero:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* Featured Products */
-        .featured-section {
-            padding: 80px 0;
-            background-color: #f9f9f9;
-        }
+       
+     
+       
         
         .section-title {
             text-align: center;
@@ -332,6 +283,48 @@
     font-size: 14px;
     margin-left: 5px;
 }
+.product-card {
+            border: none;
+            margin-bottom: 20px;
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price {
+            color: #d63384;
+            font-weight: bold;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+        .cart-item .info {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+        .cart-item .remove-btn {
+            color: red;
+            cursor: pointer;
+        }
+        .cart-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #3316b3;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -397,122 +390,109 @@
         </div>
     </div>
 
-    <!-- Hero Banner -->
-    <div class="hero-section">
-        <img src="../img/home/1920x750__6__6dcd7663c873454c8a78e4f4df7c5f5c_master.webp" alt="Bitis Collection" class="hero-image">
-        <div class="hero-content">
-            <a href="#" class="btn btn-hero">MUA NGAY</a>
-        </div>
-    </div>
+  
 
     <!-- Featured Products -->
     <div class="featured-section">
         <div class="container">
             <div class="section-title">
-                <h2>SẢN PHẨM NỔI BẬT</h2>
+                <h2>GIỎ HÀNG</h2>
             </div>
-            <div class="row">
-                <!-- Product 1 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <div class="product-img-container">
-                            <img src="../img/giaytay/giay3.webp" class="product-img" alt="Bitis Hunter X">
-                            <div class="product-badge bg-danger">-15%</div>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Giày Derby Nam Biti's BMM001777NAU</h5>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                
-                            </div>
-                            <div>
-                                <span class="product-price"> 860,000đ</span>
-                                <span class="product-old-price">1,299,000đ</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100">THÊM VÀO GIỎ</button>
-                        </div>
+            
+    <!-- Giỏ Hàng Section -->
+    <div class="container mt-5">
+        <h2>Giỏ Hàng</h2>
+        <div id="cart-items">
+            <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+
+        <div class="cart-footer">
+            <div>Tổng cộng: <span id="total-price">0 VND</span></div>
+            <a href="checkout.html" class="btn btn-primary">Thanh Toán</a>
+        </div>
+    </div>
+
+    <script>
+        // Dữ liệu giỏ hàng mẫu (có thể lấy từ localStorage hoặc server)
+        const cart = [
+            { id: 1, name: "Giày trẻ em Biti's BMM001777NAU", price: 350000, image: "../img/giày trẻ em/giay1.jpg", quantity: 1 },
+            { id: 2, name: "Giày trẻ em Biti's BVM002277NAD", price: 320000, image: "../img/giày trẻ em/giay2.jpg", quantity: 2 },
+            // Thêm các sản phẩm khác ở đây
+        ];
+
+        const cartItemsContainer = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+
+        // Hàm tính tổng giá trị giỏ hàng
+        function updateCartTotal() {
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+            });
+            totalPriceElement.textContent = total.toLocaleString() + " VND";
+        }
+
+        // Hàm hiển thị sản phẩm trong giỏ hàng
+        function displayCartItems() {
+            cartItemsContainer.innerHTML = "";
+            cart.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("cart-item");
+
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="info">
+                        <h6>${item.name}</h6>
+                        <div>Giá: <span class="price">${item.price.toLocaleString()} VND</span></div>
+                        <div>Số lượng: <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}"></div>
                     </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <div class="product-img-container">
-                            <img src="../img/giaythethao/giay7.webp" class="product-img" alt="Bitis Hunter X Trắng">
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Giày Thể Thao Cao Cấp Nam Biti's BSM003700XAM</h5>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                
-                            </div>
-                            <div>
-                                <span class="product-price">780,000đ </span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100">THÊM VÀO GIỎ</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <div class="product-img-container">
-                            <img src="../img/sandal/sandal2.webp" class="product-img" alt="Bitis Hunter Mid">
-                            <div class="product-badge  bg-danger">MỚI</div>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Giày Thể Thao Bitis Hunter Mid Đen</h5>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                
-                            </div>
-                            <div>
-                                <span class="product-price">1,299,000đ</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100">THÊM VÀO GIỎ</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <div class="product-img-container">
-                            <img src="../img/giày trẻ em/giay3.jpg" class="product-img" alt="Bitis Explorer">
-                            <div class="product-badge bg-danger">-15%</div>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Giày Thể Thao Bitis Explorer Xám</h5>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                               
-                            </div>
-                            <div>
-                                <span class="product-price">425,000đ </span>
-                                <span class="product-old-price">500,000đ </span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100">THÊM VÀO GIỎ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <span class="remove-btn" data-id="${item.id}">Xóa</span>
+                `;
+
+                cartItemsContainer.appendChild(itemDiv);
+            });
+
+            // Cập nhật tổng giá trị
+            updateCartTotal();
+        }
+
+        // Cập nhật giỏ hàng (thêm, sửa số lượng, xóa)
+        function updateCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));  // Lưu giỏ hàng vào localStorage (nếu muốn)
+            displayCartItems();
+        }
+
+        // Sự kiện thay đổi số lượng
+        cartItemsContainer.addEventListener("input", function(event) {
+            if (event.target.classList.contains("quantity-input")) {
+                const itemId = parseInt(event.target.dataset.id);
+                const newQuantity = parseInt(event.target.value);
+
+                const item = cart.find(item => item.id === itemId);
+                if (item) {
+                    item.quantity = newQuantity;
+                    updateCart();
+                }
+            }
+        });
+
+        // Sự kiện xóa sản phẩm
+        cartItemsContainer.addEventListener("click", function(event) {
+            if (event.target.classList.contains("remove-btn")) {
+                const itemId = parseInt(event.target.dataset.id);
+                const itemIndex = cart.findIndex(item => item.id === itemId);
+
+                if (itemIndex !== -1) {
+                    cart.splice(itemIndex, 1);
+                    updateCart();
+                }
+            }
+        });
+
+        // Hiển thị giỏ hàng
+        displayCartItems();
+    </script>
+            
         </div>
     </div>
     <a href="giohang.html" class="cart-floating-button">
