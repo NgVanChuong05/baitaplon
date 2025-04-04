@@ -56,6 +56,48 @@
             color: white;
             padding: 30px 0;
         }
+        .trang-chu-style {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: #d63384;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cart-floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3316b3;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-floating-button:hover {
+    background-color: #c2185b;
+}
+
+.cart-floating-button i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.cart-count {
+    background-color: white;
+    color: #9727c7;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    margin-left: 5px;
+}
     </style>
     
 </head>
@@ -109,8 +151,10 @@
             </div>
         </div>
         <div class="container d-flex justify-content-end">
-            <a class="navbar-brand fw-bold" href="#">
-                <span style="font-size: 24px; color: #d63384;"><i class="fa-solid fa-house-chimney">TRANG CHỦ</i></span>
+            <a class="navbar-brand fw-bold" href="home.html">
+                <span class="trang-chu-style">
+                    <i class="fa-solid fa-house-chimney me-2"></i> TRANG CHỦ
+                </span>
             </a>
         </div>
     </nav>
@@ -295,6 +339,10 @@
         </div>
     </div>
 </div>
+<a href="giohang.html" class="cart-floating-button">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span> 
+</a>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

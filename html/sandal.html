@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
 <link rel="stylesheet" href="../js/bootstrap.js">
+<link rel="stylesheet" href="../font/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
 <script src="../js/bootstrap.js"></script>
     <style>
         .header-hotline {
@@ -55,18 +56,62 @@
             color: white;
             padding: 30px 0;
         }
+        .trang-chu-style {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: #d63384;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cart-floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3316b3;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-floating-button:hover {
+    background-color: #c2185b;
+}
+
+.cart-floating-button i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.cart-count {
+    background-color: white;
+    color: #9727c7;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    margin-left: 5px;
+}
     </style>
-</head>
-<body>
-    <!-- Top Header -->
-    <div class="header-hotline">
+
+  
+   </head>
+   <body>
+     <!-- Top Header -->
+     <div class="header-hotline">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <i class="fas fa-phone-alt me-2"></i> Hotline: 07661 58666 (8h - 21h30) | Liên hệ hợp tác
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="#" class="text-dark me-3"><i class="fas fa-search me-1"></i> Tìm sản phẩm</a>
+                    <i class="fas fa-search me-1"></i> <input type="search" name="" id="" placeholder="nhập sản phẩm muốn tìm">
                     <a href="#" class="text-dark me-3"><i class="fas fa-clipboard-list me-1"></i> Kiểm tra đơn hàng</a>
                     <a href="#" class="text-dark"><i class="fas fa-user me-1"></i> Đăng nhập</a>
                 </div>
@@ -107,8 +152,10 @@
             </div>
         </div>
         <div class="container d-flex justify-content-end">
-            <a class="navbar-brand fw-bold" href="#">
-                <span style="font-size: 24px; color: #d63384;">TRANG CHỦ</span>
+            <a class="navbar-brand fw-bold" href="home.html">
+                <span class="trang-chu-style">
+                    <i class="fa-solid fa-house-chimney me-2"></i> TRANG CHỦ
+                </span>
             </a>
         </div>
     </nav>
@@ -293,8 +340,12 @@
         </div>
     </div>
 </div>
-    <!-- Footer -->
-    <footer class="footer">
+<a href="giohang.html" class="cart-floating-button">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span> 
+</a>
+     <!-- Footer -->
+     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -324,4 +375,26 @@
                         <li><i class="fas fa-map-marker-alt me-2"></i> 12 Nguyễn Văn Bảoo Phường 4 Gò Vấp TP.HCM </li>
                         <li><i class="fas fa-phone-alt me-2"></i> Hotline: 07661 58666</li>
                         <li><i class="fas fa-envelope me-2"></i> Email: vanchuongdeptrai@gmail.com</li>
-                        <li><i class="fas fa-clock me-2"></
+                        <li><i class="fas fa-clock me-2"></i> Giờ làm việc: 8h - 21h30</li>
+                    </ul>
+                    <div class="mt-3">
+                        <h5>KẾT NỐI VỚI CHÚNG TÔI</h5>
+                       <a href="#"> <i class="fa-brands fa-facebook">&nbsp</i></a>
+                       
+
+                       <a href="#"><i class="fa-brands fa-tiktok">&nbsp</i></a>
+                       <a href="#"><i class="fa-brands fa-instagram">&nbsp</i></a>
+                       <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">© 2023 BITTS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+   
+   </body>
+   </html>
