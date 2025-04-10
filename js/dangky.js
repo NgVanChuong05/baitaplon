@@ -35,48 +35,80 @@ registrationForm.addEventListener('submit', function(e) {
     // Validate dữ liệu đầu vào
     let isValid = true;
     
+    // Regex đơn giản cho từng trường
+    const nameRegex = /^[a-zA-ZÀ-ỹ\s]{2,}$/; // Họ và tên: chữ cái, dấu cách, ít nhất 2 ký tự
+    const usernameRegex = /^[a-zA-Z0-9_]{4,}$/; // Username: chữ, số, gạch dưới, ít nhất 4 ký tự
+    const passwordRegex = /^.{6,}$/; // Mật khẩu: ít nhất 6 ký tự bất kỳ
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email đơn giản
+    const phoneRegex = /^[0-9]{10,11}$/; // Số điện thoại: 10-11 chữ số
+    
+    // Validate Họ
     if (!Lastnameelement.value.trim()) {
+        HoError.textContent = "Họ không được để trống";
+        HoError.style.display = "block";
+        isValid = false;
+    } else if (!nameRegex.test(Lastnameelement.value)) {
+        HoError.textContent = "Họ chỉ chứa chữ cái và khoảng trắng, ít nhất 2 ký tự";
         HoError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Tên
     if (!Firstnameelement.value.trim()) {
+        TenError.textContent = "Tên không được để trống";
+        TenError.style.display = "block";
+        isValid = false;
+    } else if (!nameRegex.test(Firstnameelement.value)) {
+        TenError.textContent = "Tên chỉ chứa chữ cái và khoảng trắng, ít nhất 2 ký tự";
         TenError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Username
     if (!Usernameelement.value.trim()) {
+        UsernameError.textContent = "Username không được để trống";
+        UsernameError.style.display = "block";
+        isValid = false;
+    } else if (!usernameRegex.test(Usernameelement.value)) {
+        UsernameError.textContent = "Username chỉ chứa chữ, số, gạch dưới, ít nhất 4 ký tự";
         UsernameError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Password
     if (!Passwordelement.value.trim()) {
+        PasswordError.textContent = "Mật khẩu không được để trống";
         PasswordError.style.display = "block";
         isValid = false;
-    } else if (Passwordelement.value.length < 6) {
+    } else if (!passwordRegex.test(Passwordelement.value)) {
         PasswordError.textContent = "Mật khẩu phải có ít nhất 6 ký tự";
         PasswordError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Email
     if (!Emailelement.value.trim()) {
+        EmailError.textContent = "Email không được để trống";
         EmailError.style.display = "block";
         isValid = false;
-    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Emailelement.value)) {
-        EmailError.textContent = "Email không hợp lệ";
+    } else if (!emailRegex.test(Emailelement.value)) {
+        EmailError.textContent = "Email không hợp lệ (ví dụ: example@domain.com)";
         EmailError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Số điện thoại
     if (!Phoneelement.value.trim()) {
+        SDTError.textContent = "Số điện thoại không được để trống";
         SDTError.style.display = "block";
         isValid = false;
-    } else if (!/^[0-9]{10,11}$/.test(Phoneelement.value)) {
-        SDTError.textContent = "Số điện thoại không hợp lệ";
+    } else if (!phoneRegex.test(Phoneelement.value)) {
+        SDTError.textContent = "Số điện thoại phải có 10-11 chữ số";
         SDTError.style.display = "block";
         isValid = false;
     }
     
+    // Validate Điều khoản
     if (!agreeTermselement.checked) {
         agreeTermsError.textContent = "Bạn phải đồng ý với điều khoản";
         agreeTermsError.style.display = "block";
@@ -95,18 +127,5 @@ registrationForm.addEventListener('submit', function(e) {
         setTimeout(() => {
             successAlert.style.display = "none";
         }, 3000);
-        
-       
     }
 });
-
-// gui du lieu tu form len localstorage
-if(Lastnameelement.value && 
-    Firstnameelement.value &&
-     Usernameelement.value &&
-      Passwordelement.value && 
-     validateEmail(Emailelement.value) 
-    && Phoneelement.value){
-console.log("submits");
-}
-    

@@ -12,28 +12,55 @@ const DISPLAY_NONE = 'none';
 const PASSWORD_MIN_LENGTH = 6;
 const ALERT_TIMEOUT = 3000;
 
+// Regex Patterns
+const USERNAME_REGEX = /^[a-zA-Z0-9_]{4,20}$/; // 4-20 ký tự, chỉ chữ, số và gạch dưới
+const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$/; // Ít nhất 6 ký tự, có ít nhất 1 chữ và 1 số
+
+// Error Messages
+const ERROR_MESSAGES = {
+    username: {
+        required: 'Tên đăng nhập không được để trống',
+        invalid: 'Tên đăng nhập phải có 4-20 ký tự, chỉ chứa chữ, số và gạch dưới'
+    },
+    password: {
+        required: 'Mật khẩu không được để trống',
+        length: `Mật khẩu phải có ít nhất ${PASSWORD_MIN_LENGTH} ký tự`,
+        invalid: 'Mật khẩu phải chứa ít nhất 1 chữ cái và 1 số'
+    }
+};
+
 // Form validation
 const validateForm = () => {
     let isValid = true;
     
     // Reset errors
-    UsernameError.style.display = "none";
-    PasswordError.style.display = "none";
+    usernameError.style.display = DISPLAY_NONE;
+    passwordError.style.display = DISPLAY_NONE;
 
-    // Validate 
-    if (!usernameInput.value.trim()) {
-        usernameError.textContent = 'Tên đăng nhập không được để trống';
+    // Validate username
+    const usernameValue = usernameInput.value.trim();
+    if (!usernameValue) {
+        usernameError.textContent = ERROR_MESSAGES.username.required;
+        usernameError.style.display = DISPLAY_BLOCK;
+        isValid = false;
+    } else if (!USERNAME_REGEX.test(usernameValue)) {
+        usernameError.textContent = ERROR_MESSAGES.username.invalid;
         usernameError.style.display = DISPLAY_BLOCK;
         isValid = false;
     }
 
     // Validate password
-    if (!passwordInput.value.trim()) {
-        passwordError.textContent = 'Mật khẩu không được để trống';
+    const passwordValue = passwordInput.value.trim();
+    if (!passwordValue) {
+        passwordError.textContent = ERROR_MESSAGES.password.required;
         passwordError.style.display = DISPLAY_BLOCK;
         isValid = false;
-    } else if (passwordInput.value.length < PASSWORD_MIN_LENGTH) {
-        passwordError.textContent = `Mật khẩu phải có ít nhất ${PASSWORD_MIN_LENGTH} ký tự`;
+    } else if (passwordValue.length < PASSWORD_MIN_LENGTH) {
+        passwordError.textContent = ERROR_MESSAGES.password.length;
+        passwordError.style.display = DISPLAY_BLOCK;
+        isValid = false;
+    } else if (!PASSWORD_REGEX.test(passwordValue)) {
+        passwordError.textContent = ERROR_MESSAGES.password.invalid;
         passwordError.style.display = DISPLAY_BLOCK;
         isValid = false;
     }
