@@ -248,7 +248,7 @@
             color: white;
             padding: 30px 0;
         }
-        .cart-floating-button {
+        /* .cart-floating-button {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -263,8 +263,8 @@
     align-items: center;
     font-size: 18px;
     transition: background-color 0.3s ease;
-}
-
+} */
+/* 
 .cart-floating-button:hover {
     background-color: #c2185b;
 }
@@ -272,9 +272,9 @@
 .cart-floating-button i {
     font-size: 20px;
     margin-right: 8px;
-}
+} */
 
-.cart-count {
+/* .cart-count {
     background-color: white;
     color: #9727c7;
     font-weight: bold;
@@ -282,7 +282,7 @@
     padding: 2px 8px;
     font-size: 14px;
     margin-left: 5px;
-}
+} */
 .product-card {
             border: none;
             margin-bottom: 20px;
@@ -326,6 +326,40 @@
             border: none;
         }
     </style>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let tbody = document.getElementById('products-cart');
+            let total = 0;
+        
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                total += itemTotal;
+        
+                let row = `
+                <tr>
+                    <td>${item.name}</td>
+                    <td><img src="${item.image}" style="width: 60px; height: 60px; object-fit: cover;"></td>
+                    <td>${item.price.toLocaleString()}đ</td>
+                    <td>${item.quantity}</td>
+                    <td>${itemTotal.toLocaleString()}đ</td>
+                    <td><button onclick="removeItem(${index})" class="btn btn-danger btn-sm">X</button></td>
+                </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        
+            document.getElementById('total-money').innerText = total.toLocaleString() + 'đ';
+        });
+        
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload(); // Tải lại để cập nhật bảng
+        }
+        updateCartCount(); // Gọi ngay khi trang load
+        </script>
 </head>
 <body>
     <!-- Top Bar -->
@@ -336,8 +370,8 @@
                     <i class="fas fa-phone-alt me-2"></i> HOTLINE: 07661 58666 (8h - 21h30)
                 </div>
                 <div class="col-md-6 text-end auth-buttons">
-                    <a href="#" class="btn btn-login"><i class="fas fa-sign-in-alt me-1"></i> Đăng nhập</a>
-                    <a href="#" class="btn btn-register"><i class="fas fa-user-plus me-1"></i> Đăng ký</a>
+                    <a href="dangnhap.html" class="btn btn-login"><i class="fas fa-sign-in-alt me-1"></i> Đăng nhập</a>
+                    <a href="dangky.html" class="btn btn-register"><i class="fas fa-user-plus me-1"></i> Đăng ký</a>
                 </div>
             </div>
         </div>
@@ -390,115 +424,32 @@
         </div>
     </div> 
 
-  
-
-    <!-- Featured Products -->
-    <div class="featured-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>GIỎ HÀNG</h2>
-            </div>
-            
-    <!-- Giỏ Hàng Section -->
-    <div class="container mt-5">
-        <h2>Giỏ Hàng</h2>
-        <div id="cart-items">
-            <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+    <div class='container'>
+        <div class='row'>
+          <div class='col-12 my-5'>
+            <table class='table align-middle'>
+              <thead>
+              <tr>
+                <th scope='col'>SẢN PHẨM</th>
+                <th scope='col'>HÌNH ẢNH</th>
+                <th scope='col'>GIÁ</th>
+                <th scope='col'>SỐ LƯỢNG</th>
+                <th scope='col'>TỔNG TIỀN</th>
+                <th scope='col'>XÓA</th>
+              </tr>
+              </thead>
+              <tbody id='products-cart'></tbody>
+            </table>
+          </div>
+          <div class='col-12' style="margin-left: 70%;">
+            <h4>TỔNG GIÁ TIỀN: <span id='total-money'>0</span></h4>
+          </div>
         </div>
-
-        <div class="cart-footer">
-            <div>Tổng cộng: <span id="total-price">0 VND</span></div>
-            <a href="checkout.html" class="btn btn-primary">Thanh Toán</a>
-        </div>
-    </div>
-
-    <script>
-        // Dữ liệu giỏ hàng mẫu (có thể lấy từ localStorage hoặc server)
-        const cart = [
-            { id: 1, name: "Giày trẻ em Biti's BMM001777NAU", price: 350000, image: "../img/giày trẻ em/giay1.jpg", quantity: 1 },
-            { id: 2, name: "Giày trẻ em Biti's BVM002277NAD", price: 320000, image: "../img/giày trẻ em/giay2.jpg", quantity: 2 },
-            // Thêm các sản phẩm khác ở đây
-        ];
-
-        const cartItemsContainer = document.getElementById("cart-items");
-        const totalPriceElement = document.getElementById("total-price");
-
-        // Hàm tính tổng giá trị giỏ hàng
-        function updateCartTotal() {
-            let total = 0;
-            cart.forEach(item => {
-                total += item.price * item.quantity;
-            });
-            totalPriceElement.textContent = total.toLocaleString() + " VND";
-        }
-
-        // Hàm hiển thị sản phẩm trong giỏ hàng
-        function displayCartItems() {
-            cartItemsContainer.innerHTML = "";
-            cart.forEach(item => {
-                const itemDiv = document.createElement("div");
-                itemDiv.classList.add("cart-item");
-
-                itemDiv.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}">
-                    <div class="info">
-                        <h6>${item.name}</h6>
-                        <div>Giá: <span class="price">${item.price.toLocaleString()} VND</span></div>
-                        <div>Số lượng: <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}"></div>
-                    </div>
-                    <span class="remove-btn" data-id="${item.id}">Xóa</span>
-                `;
-
-                cartItemsContainer.appendChild(itemDiv);
-            });
-
-            // Cập nhật tổng giá trị
-            updateCartTotal();
-        }
-
-        // Cập nhật giỏ hàng (thêm, sửa số lượng, xóa)
-        function updateCart() {
-            localStorage.setItem("cart", JSON.stringify(cart));  // Lưu giỏ hàng vào localStorage (nếu muốn)
-            displayCartItems();
-        }
-
-        // Sự kiện thay đổi số lượng
-        cartItemsContainer.addEventListener("input", function(event) {
-            if (event.target.classList.contains("quantity-input")) {
-                const itemId = parseInt(event.target.dataset.id);
-                const newQuantity = parseInt(event.target.value);
-
-                const item = cart.find(item => item.id === itemId);
-                if (item) {
-                    item.quantity = newQuantity;
-                    updateCart();
-                }
-            }
-        });
-
-        // Sự kiện xóa sản phẩm
-        cartItemsContainer.addEventListener("click", function(event) {
-            if (event.target.classList.contains("remove-btn")) {
-                const itemId = parseInt(event.target.dataset.id);
-                const itemIndex = cart.findIndex(item => item.id === itemId);
-
-                if (itemIndex !== -1) {
-                    cart.splice(itemIndex, 1);
-                    updateCart();
-                }
-            }
-        });
-
-        // Hiển thị giỏ hàng
-        displayCartItems();
-    </script>
-            
-        </div>
-    </div>
-    <a href="giohang.html" class="cart-floating-button">
+      </div>
+    <!-- <a href="giohang.html" class="cart-floating-button">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span> 
-    </a>
+    </a> -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -549,6 +500,8 @@
             </div>
         </div>
     </footer>
+   
+        
    
 
 </body>
