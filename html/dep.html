@@ -134,6 +134,23 @@
 window.onload = function() {
     updateCartCount(); // Gọi khi trang load xong
 };
+
+    </script>
+    <script>
+        function xemChiTiet(ten, hinhAnh, gia) {
+    const sanPham = {
+        name: ten,
+        image: hinhAnh,
+        price: gia,
+        sizes: ["38", "39", "40", "41", "42"],
+        colors: ["Đen", "Nâu", "Trắng"],
+        description: "Đôi dép Biti's thiết kế thời trang, chất liệu cao su siêu nhẹ, đế chống trượt, phù hợp cho cả nam và nữ trong các hoạt động hằng ngày."
+    };
+    localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+    window.location.href = "chitietsanpham.html";
+}
+
+
     </script>
 </head>
 <body>
@@ -213,7 +230,7 @@ window.onload = function() {
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
             <div class="position-relative">
-                <img src="../img/dép/dep1.jpg" class="w-100" alt="Dép quai ngang Biti's">
+                <img src="../img/dép/dep1.jpg" class="w-100" alt="Dép quai ngang Biti's" onclick="xemChiTiet('Dép quai ngang Bitis DEP001NAU', '../img/dép/dep1.jpg', 199000)">
                 <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-20%</span>
             </div>
             <div class="card-body">
