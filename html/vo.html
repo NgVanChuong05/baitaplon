@@ -100,6 +100,21 @@
     margin-left: 5px;
 }
     </style>
+        <script>
+            
+            function xemChiTiet(ten, hinhAnh, gia) {
+        const sanPham = {
+            name: ten,
+            image: hinhAnh,
+            price: gia,
+            sizes: ["38", "39", "40", "41", "42"],
+            colors: ["Đen", "Nâu", "Trắng"],
+            description: "Vớ Biti’s được làm từ chất liệu cotton co giãn, thấm hút mồ hôi tốt, mang lại cảm giác thoáng mát và dễ chịu suốt cả ngày. Thiết kế ôm chân, đường may chắc chắn, phù hợp với nhiều loại giày khác nhau. Là phụ kiện không thể thiếu giúp bảo vệ đôi chân và hoàn thiện phong cách của bạn."
+        };
+        localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+        window.location.href = "chitietsanpham.html";
+        }
+        </script>
     
 </head>
 <body>
@@ -184,7 +199,7 @@
                 <!-- <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-20%</span> -->
             </div>
             <div class="card-body">
-                <h6 class="card-title">Vớ Cổ chân Biti’s Hunter – Original H Màu Trắng ASMH00110TRG</h6>
+                <h6 class="card-title">Vớ Cổ chân Bitis Hunter  Original H Màu Trắng ASMH00110TRG</h6>
                 <div class="mb-2 ">
                     <span class="price ">49,000 ₫</span>
                     <!-- <span class="text-muted text-decoration-line-through ms-2">999,000đ</span> -->
@@ -194,7 +209,8 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Derby Nam Bitis BMM001777NAU', '../img/giaytay/giayBMM00177Nau.webp', 680000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Vớ Cổ chân Bitis Hunter  Original H Màu Trắng ASMH00110TRG', '../img/vo/vo_trang_3_c2d92c754594430bab2c0cc8d624f527_master.webp', 49000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Vớ Cổ chân Bitis Hunter  Original H Màu Trắng ASMH00110TRG', '../img/vo/vo_trang_3_c2d92c754594430bab2c0cc8d624f527_master.webp', 49000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
@@ -204,7 +220,7 @@
         <div class="card product-card h-100">
             <img src="../img/vo/vo2.webp" class="w-100" alt="">
             <div class="card-body">
-                <h6 class="card-title">Vớ Cổ chân Biti’s Hunter – Original H Màu Đen ASMH00110DEN</h6>
+                <h6 class="card-title">Vớ Cổ chân Bitis Hunter  Original H Màu Đen ASMH00110DEN</h6>
                 <div class="mb-2">
                     <span class="price">49,000 ₫</span>
                 </div>
@@ -213,7 +229,8 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('>Giày Tây Nam Bitis BVM002277NAD', '../img/giaytay/giay2.webp', 816000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Vớ Cổ chân Bitis Hunter  Original H Màu Đen ASMH00110DEN', '../img/vo/vo2.webp', 49000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Vớ Cổ chân Bitis Hunter  Original H Màu Đen ASMH00110DEN', '../img/vo/vo2.webp', 49000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
@@ -226,9 +243,9 @@
                 <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-15%</span>
             </div>
             <div class="card-body">
-                <h6 class="card-title">Vớ Cổ lửng Biti’s Hunter – Original H Màu Trắng ASMH00120TRG</h6>
+                <h6 class="card-title">Vớ Cổ lửng Bitis Hunter  Original H Màu Trắng ASMH00120TRG</h6>
                 <div class="mb-2">
-                    <span class="price"> 1,104,000đ</span>
+                    <span class="price"> 41,000đ</span>
                     <span class="text-muted text-decoration-line-through ms-2">49,000 ₫</span>
                 </div>
                 <!-- <div class="d-flex justify-content-between">
@@ -236,7 +253,8 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Vớ Cổ lửng Bitis Hunter  Original H Màu Trắng ASMH00120TRG', '../img/vo/vo3.webp', 41000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Vớ Cổ lửng Bitis Hunter  Original H Màu Trắng ASMH00120TRG', '../img/vo/vo3.webp', 41000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
@@ -246,7 +264,7 @@
         <div class="card product-card h-100">
             <img src="../img/vo/vo4.webp" class="w-100" alt="">
             <div class="card-body">
-                <h6 class="card-title">Vớ Cổ lửng Biti’s Hunter – Original H Màu Đen ASMH00120DEN
+                <h6 class="card-title">Vớ Cổ lửng Bitis Hunter  Original H Màu Đen ASMH00120DEN
                    </h6>
                 <div class="mb-2">
                     <span class="price">49,000₫</span>
@@ -256,7 +274,8 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677DEN ', '../img/giaytay/giay4.webp', 680000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Vớ Cổ lửng Bitis Hunter  Original H Màu Đen ASMH00120DEN', '../img/vo/vo4.webp', 49000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Vớ Cổ lửng Bitis Hunter  Original H Màu Đen ASMH00120DEN', '../img/vo/vo4.webp', 49000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
@@ -273,14 +292,15 @@
                 <h6 class="card-title">Combo 2 Vớ Biti's Nam ASMG00140</h6>
                 <div class="mb-2">
                     <span class="price">65,000₫</span>
-                    <span class="text-muted text-decoration-line-through ms-2">699,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">71,500đ</span>
                 </div>
                 <!-- <div class="d-flex justify-content-between">
                     <span class="text-muted">(38)</span>
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Nam Bitis BMM000877', '../img/giaytay/giay5.webp', 699000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Combo 2 Vớ Bitis Nam ASMG00140', '../img/vo/vo5.webp', 65000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Combo 2 Vớ Bitis Nam ASMG00140', '../img/vo/vo5.webp', 65000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
@@ -299,7 +319,8 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Nam Bitis BMM000777', '../img/giaytay/giay6.webp', 790000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Combo 2 Vớ Bitis Nữ Màu Trắng ASWG00070TRG', '../img/vo/vo6.webp', 67000)" >xem chi tiết</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Combo 2 Vớ Bitis Nữ Màu Trắng ASWG00070TRG', '../img/vo/vo6.webp', 67000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>

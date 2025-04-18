@@ -100,6 +100,22 @@
     margin-left: 5px;
 }
     </style>
+        <script>
+            
+            function xemChiTiet(ten, hinhAnh, gia) {
+        const sanPham = {
+            name: ten,
+            image: hinhAnh,
+            price: gia,
+            sizes: ["38", "39", "40", "41", "42"],
+            colors: ["Đen", "Nâu", "Trắng"],
+            description: "Giày tây Biti’s mang phong cách lịch lãm, được thiết kế tinh tế với chất liệu da cao cấp, tạo cảm giác thoải mái khi mang. Phù hợp cho môi trường công sở, sự kiện hay gặp gỡ đối tác, giày giúp tôn lên vẻ sang trọng và chuyên nghiệp cho người sử dụng."
+        };
+        localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+        window.location.href = "chitietsanpham.html";
+    }
+    </script>
+    
     
 </head>
 <body>
@@ -195,6 +211,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Derby Nam Bitis BMM001777NAU', '../img/giaytay/giayBMM00177Nau.webp', 680000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Derby Nam Bitis BMM001777NAU', '../img/giaytay/giayBMM00177Nau.webp', 680000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -214,6 +231,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('>Giày Tây Nam Bitis BVM002277NAD', '../img/giaytay/giay2.webp', 816000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('>Giày Tây Nam Bitis BVM002277NAD', '../img/giaytay/giay2.webp', 816000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -237,6 +255,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -256,6 +275,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Mocasin Nam Bitis BMM001677DEN ', '../img/giaytay/giay4.webp', 680000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677DEN ', '../img/giaytay/giay4.webp', 680000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -280,6 +300,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Tây Nam Bitis BMM000877', '../img/giaytay/giay5.webp', 699000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Nam Bitis BMM000877', '../img/giaytay/giay5.webp', 699000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -299,6 +320,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Tây Nam Bitis BMM000777', '../img/giaytay/giay6.webp', 790000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Nam Bitis BMM000777', '../img/giaytay/giay6.webp', 790000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -319,6 +341,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Tây Boot Nam Bitis BVM001788', '../img/giaytay/giay7.webp', 1279000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Boot Nam Bitis BVM001788', '../img/giaytay/giay7.webp', 1279000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -338,6 +361,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Tây Nam Bitis BVM001588', '../img/giaytay/giay8.jpg', 999000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Tây Nam Bitis BVM001588', '../img/giaytay/giay8.jpg', 999000)">THÊM VÀO GIỎ</button>
             </div>
         </div>

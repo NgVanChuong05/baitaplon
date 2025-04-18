@@ -11,6 +11,22 @@
 <link rel="stylesheet" href="../font/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
 <script src="../js/bootstrap.js"></script>
 <script src="../js/addToCard.js"></script>
+<script>
+            
+    function xemChiTiet(ten, hinhAnh, gia) {
+const sanPham = {
+    name: ten,
+    image: hinhAnh,
+    price: gia,
+    sizes: ["38", "39", "40", "41", "42"],
+    colors: ["Đen", "Nâu", "Trắng"],
+    description: "Khám phá bộ sưu tập giày giảm giá tại Biti’s, nơi bạn có thể sở hữu những đôi giày thời trang, chất lượng với mức giá hấp dẫn. Từ giày thể thao năng động đến giày tây lịch lãm, tất cả đều được giảm giá mạnh, giúp bạn tiết kiệm chi phí mà vẫn có được đôi giày ưng ý. Đừng bỏ lỡ cơ hội sở hữu những sản phẩm tuyệt vời với giá cực kỳ ưu đãi!"
+};
+localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+window.location.href = "chitietsanpham.html";
+}
+</script>
+
     <style>
         .header-hotline {
             background-color: #f8f9fa;
@@ -195,6 +211,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM001777NAU', '../img/giày trẻ em/giay1.jpg', 350000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM001777NAU', '../img/giày trẻ em/giay1.jpg', 350000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -214,6 +231,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BVM002277NAD', '../img/giày trẻ em/giay2.jpg', 320000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BVM002277NAD', '../img/giày trẻ em/giay2.jpg', 320000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -237,6 +255,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM001677NAD', '../img/giày trẻ em/giay3.jpg', 425000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM001677NAD', '../img/giày trẻ em/giay3.jpg', 425000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -256,6 +275,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM001677DEN', '../img/giày trẻ em/giay4.jpg', 380000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM001677DEN', '../img/giày trẻ em/giay4.jpg', 380000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -280,6 +300,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM000877', '../img/giày trẻ em/giay5.jpg', 450000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM000877', '../img/giày trẻ em/giay5.jpg', 450000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -299,6 +320,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM000777', '../img/giày trẻ em/giay6.jpg', 390000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM000777', '../img/giày trẻ em/giay6.jpg', 390000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -319,6 +341,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BVM001788', '../img/giày trẻ em/giay7.jpg', 499000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BVM001788', '../img/giày trẻ em/giay7.jpg', 499000)">THÊM VÀO GIỎ</button>
             </div>
         </div>

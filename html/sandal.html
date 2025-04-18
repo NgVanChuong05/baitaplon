@@ -100,6 +100,21 @@
 }
     </style>
     <script src="../js/addToCard.js"></script>
+    <script>
+            
+        function xemChiTiet(ten, hinhAnh, gia) {
+    const sanPham = {
+        name: ten,
+        image: hinhAnh,
+        price: gia,
+        sizes: ["38", "39", "40", "41", "42"],
+        colors: ["Đen", "Nâu", "Trắng"],
+        description: "Dép sandal Biti’s mang đến sự thoải mái tối đa cho đôi chân trong những ngày hè oi ả. Với thiết kế thoáng mát, dễ chịu và đế chống trượt, dép sandal không chỉ giúp bạn di chuyển linh hoạt mà còn tạo phong cách trẻ trung, năng động. Đây là lựa chọn hoàn hảo cho những buổi dạo phố hay đi biển."
+    };
+    localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+    window.location.href = "chitietsanpham.html";
+    }
+    </script>
 
   
    </head>
@@ -194,6 +209,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Quai Ngang Da Thật BITTS SD01', '../img/sandal/sandal1.jpg', 999000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Quai Ngang Da Thật BITTS SD01', '../img/sandal/sandal1.jpg', 999000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -213,6 +229,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Gót Vuông BITTS SD021', '../img/sandal/sandal2.webp', 1299000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Gót Vuông BITTS SD021', '../img/sandal/sandal2.webp', 1299000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -236,6 +253,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Đế Xuồng BITTS SD03', '../img/sandal/sandal3.jpg', 1099000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Đế Xuồng BITTS SD03', '../img/sandal/sandal3.jpg', 1099000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -255,6 +273,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Dây Chéo BITTS SD04', '../img/sandal/sandal4.jpg', 899000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Dây Chéo BITTS SD04', '../img/sandal/sandal4.jpg', 899000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -279,6 +298,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Nam Da Bò BITTS SD05', '../img/sandal/sandal5.jpg', 599000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Nam Da Bò BITTS SD05', '../img/sandal/sandal5.jpg', 599000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -298,6 +318,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal BITTS SD06', '../img/sandal/sandal6.jpg', 899000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal BITTS SD06', '../img/sandal/sandal6.jpg', 899000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -318,6 +339,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Đế Bệt BITTS SD07', '../img/sandal/sandal7.jpg', 1199000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Đế Bệt BITTS SD07', '../img/sandal/sandal7.jpg', 1199000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -337,6 +359,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Quai Hậu BITTS SD08', '../img/sandal/sandal8.jpg', 399000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Quai Hậu BITTS SD08', '../img/sandal/sandal8.jpg', 399000)">THÊM VÀO GIỎ</button>
             </div>
         </div>

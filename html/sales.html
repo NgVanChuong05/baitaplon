@@ -100,6 +100,21 @@
     margin-left: 5px;
 }
     </style>
+    <script>
+            
+        function xemChiTiet(ten, hinhAnh, gia) {
+    const sanPham = {
+        name: ten,
+        image: hinhAnh,
+        price: gia,
+        sizes: ["38", "39", "40", "41", "42"],
+        colors: ["Đen", "Nâu", "Trắng"],
+        description: "Khám phá bộ sưu tập giày giảm giá tại Biti’s, nơi bạn có thể sở hữu những đôi giày thời trang, chất lượng với mức giá hấp dẫn. Từ giày thể thao năng động đến giày tây lịch lãm, tất cả đều được giảm giá mạnh, giúp bạn tiết kiệm chi phí mà vẫn có được đôi giày ưng ý. Đừng bỏ lỡ cơ hội sở hữu những sản phẩm tuyệt vời với giá cực kỳ ưu đãi!"
+    };
+    localStorage.setItem("selectedProduct", JSON.stringify(sanPham));
+    window.location.href = "chitietsanpham.html";
+    }
+    </script>
     
 </head>
 <body>
@@ -193,6 +208,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -216,6 +232,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thể Thao Bitis Nam Màu Xám BSM004000XAM', '../img/giaythethao/giay3.webp', 269000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -239,6 +256,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Thông Dụng Eva Phun Nam Bitis E-Flow BSM002900', '../img/giaythethao/giay5.webp', 159000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thông Dụng Eva Phun Nam Bitis E-Flow BSM002900', '../img/giaythethao/giay5.webp', 159000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -260,6 +278,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày Thể Thao Cao Cấp Nam Bitis BSM003700XAM', '../img/giaythethao/giay7.webp', 780000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thể Thao Cao Cấp Nam Bitis BSM003700XAM', '../img/giaythethao/giay7.webp', 780000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -286,6 +305,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM001677NAD', '../img/giày trẻ em/giay3.jpg', 425000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM001677NAD', '../img/giày trẻ em/giay3.jpg', 425000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -308,6 +328,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Giày trẻ em Bitis BMM000877', '../img/giày trẻ em/giay5.jpg', 450000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM000877', '../img/giày trẻ em/giay5.jpg', 450000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -331,6 +352,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Quai Ngang Da Thật BITTS SD01', '../img/sandal/sandal1.jpg', 999000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Quai Ngang Da Thật BITTS SD01', '../img/sandal/sandal1.jpg', 999000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -354,6 +376,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Đế Xuồng BITTS SD03', '../img/sandal/sandal3.jpg', 1099000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Đế Xuồng BITTS SD03', '../img/sandal/sandal3.jpg', 1099000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -380,6 +403,7 @@
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Sandal Nam Da Bò BITTS SD05', '../img/sandal/sandal5.jpg', 599000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Nam Da Bò BITTS SD05', '../img/sandal/sandal5.jpg', 599000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -402,6 +426,7 @@
                 </div>
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Dép quai ngang Bitis DEP001NAU', '../img/dép/dep1.jpg', 199000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100" onclick="addToCart('Dép quai ngang Bitis DEP001NAU', '../img/dép/dep1.jpg', 199000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -425,6 +450,7 @@
                 </div>
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Dép thể thao Bitis DEP003XANH', '../img/dép/dep3.jpg', 224000)" >xem chi tiết</button>
                 <button class="btn btn-outline-primary w-100"  onclick="addToCart('Dép thể thao Bitis DEP003XANH', '../img/dép/dep3.jpg', 224000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
@@ -447,6 +473,7 @@
                 </div>
             </div>
             <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-warning w-100 mb-1"  onclick="xemChiTiet('Dép quai hậu Bitis DEP005HONG', '../img/dép/dep5.jpg', 154000)" >xem chi tiết</button>
                 <button  class="btn btn-outline-primary w-100" onclick="addToCart('Dép quai hậu Bitis DEP005HONG', '../img/dép/dep5.jpg', 154000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
