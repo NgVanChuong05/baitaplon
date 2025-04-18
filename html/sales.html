@@ -7,9 +7,10 @@
     <!-- Bootstrap 5 CSS -->
 <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../font/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
 <link rel="stylesheet" href="../js/bootstrap.js">
+<link rel="stylesheet" href="../font/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
 <script src="../js/bootstrap.js"></script>
+<script src="../js/addToCard.js"></script>
     <style>
         .header-hotline {
             background-color: #f8f9fa;
@@ -99,10 +100,9 @@
     margin-left: 5px;
 }
     </style>
-    <script src="../js/addToCard.js"></script>
+    
 </head>
 <body>
-    <div class="container-fluid">
     <!-- Top Header -->
     <div class="header-hotline">
         <div class="container">
@@ -120,10 +120,10 @@
     </div>
 
     <!-- Logo & Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom  text-white"  >
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <span style="font-size: 24px; color: #d63384;">Giày Thể Thao</span>
+                <span style="font-size: 24px; color: #d63384;">SALES</span>
             </a>
             
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -132,8 +132,8 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                             DANH MỤC
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="giaytay.html">Giày Tây</a></li>
+                        <ul class="dropdown-menu  " >
+                            <li><a class="dropdown-item " href="giaytay.html">Giày Tây</a></li>
                             <li><a class="dropdown-item" href="giaythethao.html">Giày thể thao</a></li>
                             <li><a class="dropdown-item" href="giaydabanh.html">Giày đá banh</a></li>
                             <li><a class="dropdown-item" href="sandal.html">Giày sandal</a></li>
@@ -160,14 +160,13 @@
                 </span>
             </a>
         </div>
-        
     </nav>
 
     <!-- Banner Section -->
     <div class="banner-section">
         <div class="container">
          
-            <img src="../img/giaythethao/banner.webp" class="w-100"  alt="" class="img-fluid rounded">
+            <img src="../img/sales/1920x750__11__db44dc06716d42ba8f2af2629649eba7_master.jpg" class="w-100"  alt="" class="img-fluid rounded">
         </div>
     </div>
 
@@ -177,49 +176,29 @@
 
 <div class="row">
     <!-- Hàng 1 -->
-    <!-- Sản phẩm 1 -->
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
             <div class="position-relative">
-                <img src="../img/giaythethao/giay1.webp" class="w-100" alt="">
-                <!-- <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-20%</span> -->
+                <img src="../img/giaytay/giay3.webp" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-15%</span>
             </div>
             <div class="card-body">
-                <h6 class="card-title">Giày Thể Thao Thông Dụng Nam Biti's BSM003900</h6>
-                <div class="mb-2 ">
-                    <span class="price ">380,000đ</span>
-                    <!-- <span class="text-muted text-decoration-line-through ms-2">999,000đ</span> -->
+                <h6 class="card-title">Giày Mocasin Nam Biti's BMM001677NAD</h6>
+                <div class="mb-2">
+                    <span class="price"> 1,104,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">1,299,000đ</span>
                 </div>
                 <!-- <div class="d-flex justify-content-between">
-                    <span class="text-muted">(42)</span>
+                    <span class="text-muted">(56)</span>
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thể Thao Thông Dụng Nam Bitis BSM003900', '../img/giaythethao/giay1.webp', 380000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Mocasin Nam Bitis BMM001677NAD', '../img/giaytay/giay3.webp', 1140000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
     
     <!-- Sản phẩm 2 -->
-    <div class="col-lg-3 col-md-4 col-6 mb-4">
-        <div class="card product-card h-100">
-            <img src="../img/giaythethao/giay2.webp" class="w-100" alt="">
-            <div class="card-body">
-                <h6 class="card-title">Giày Thể Thao Thông Dụng Nam Biti's Basic BSM000600</h6>
-                <div class="mb-2">
-                    <span class="price">316,000đ</span>
-                </div>
-                <!-- <div class="d-flex justify-content-between">
-                    <span class="text-muted">(28)</span>
-                </div> -->
-            </div>
-            <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100"onclick="addToCart('Giày Thể Thao Thông Dụng Nam Bitis Basic BSM000600', '../img/giaythethao/giay2.webp', 316000)">THÊM VÀO GIỎ</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Sản phẩm 3 -->
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
             <div class="position-relative">
@@ -242,27 +221,7 @@
         </div>
     </div>
     
-    <!-- Sản phẩm 4 -->
-    <div class="col-lg-3 col-md-4 col-6 mb-4">
-        <div class="card product-card h-100">
-            <img src="../img/giaythethao/giay4.webp" class="w-100" alt="">
-            <div class="card-body">
-                <h6 class="card-title">Giày Thông Dụng Eva Phun Biti's Nam Màu Đen BSM002901DEN</h6>
-                <div class="mb-2">
-                    <span class="price">300,000đ</span>
-                </div>
-                <!-- <div class="d-flex justify-content-between">
-                    <span class="text-muted">(34)</span>
-                </div> -->
-            </div>
-            <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thông Dụng Eva Phun Bitis Nam Màu Đen BSM002901DEN','../img/giaythethao/giay4.webp',300000)">THÊM VÀO GIỎ</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Hàng 2 -->
-    <!-- Sản phẩm 5 -->
+    <!-- Sản phẩm 3 -->
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
             <div class="position-relative">
@@ -285,26 +244,7 @@
         </div>
     </div>
     
-    <!-- Sản phẩm 6 -->
-    <div class="col-lg-3 col-md-4 col-6 mb-4">
-        <div class="card product-card h-100">
-            <img src="../img/giaythethao/giay6.webp" class="w-100" alt="">
-            <div class="card-body">
-                <h6 class="card-title">Giày Thể Thao Nam Biti's BSM004000DEN</h6>
-                <div class="mb-2">
-                    <span class="price">366,000đ</span>
-                </div>
-                <!-- <div class="d-flex justify-content-between">
-                    <span class="text-muted">(45)</span>
-                </div> -->
-            </div>
-            <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thể Thao Nam Bitis BSM004000DEN', '../img/giaythethao/giay6.webp', 366000)">THÊM VÀO GIỎ</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Sản phẩm 7 -->
+    <!-- Sản phẩm 4 -->
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
             <img src="../img/giaythethao/giay7.webp" class="w-100" alt="">
@@ -324,32 +264,201 @@
             </div>
         </div>
     </div>
+</div> <!-- Đóng thẻ row cho hàng 1 -->
+
+<div class="row"> <!-- Mở thẻ row mới cho hàng 2 -->
+    <!-- Hàng 2 -->
+    <!-- Sản phẩm 5 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/giày trẻ em/giay3.jpg" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-15%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Giày trẻ em Biti's BMM001677NAD</h6>
+                <div class="mb-2">
+                    <span class="price"> 425,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">500,000đ</span>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                    <span class="text-muted">(56)</span>
+                </div> -->
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM001677NAD', '../img/giày trẻ em/giay3.jpg', 425000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+    <!-- Sản phẩm 6 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/giày trẻ em/giay5.jpg" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-10%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Giày sneaker trẻ em Biti's BMM000877</h6>
+                <div class="mb-2">
+                    <span class="price">450,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">500,000đ</span>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                    <span class="text-muted">(38)</span>
+                </div> -->
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày trẻ em Bitis BMM000877', '../img/giày trẻ em/giay5.jpg', 450000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sản phẩm 7 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/sandal/sandal1.jpg" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-20%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Sandal Quai Ngang Da Thật BITTS SD01</h6>
+                <div class="mb-2">
+                    <span class="price">799,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">999,000đ</span>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                    <span class="text-muted">(42)</span>
+                </div> -->
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Quai Ngang Da Thật BITTS SD01', '../img/sandal/sandal1.jpg', 999000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
     
     <!-- Sản phẩm 8 -->
     <div class="col-lg-3 col-md-4 col-6 mb-4">
         <div class="card product-card h-100">
-            <img src="../img/giaythethao/gaiy8.webp" class="w-100" alt="">
+            <div class="position-relative">
+                <img src="../img/sandal/sandal3.jpg" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-15%</span>
+            </div>
             <div class="card-body">
-                <h6 class="card-title">Giày Thể Thao Cao Cấp Nam Biti's BSM003700XAM</h6>
+                <h6 class="card-title">Sandal Đế Xuồng BITTS SD03</h6>
                 <div class="mb-2">
-                    <span class="price">979,000đ</span>
+                    <span class="price">1,099,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">1,299,000đ</span>
                 </div>
                 <!-- <div class="d-flex justify-content-between">
-                    <span class="text-muted">(52)</span>
+                    <span class="text-muted">(56)</span>
                 </div> -->
             </div>
             <div class="card-footer bg-white border-0">
-                <button class="btn btn-outline-primary w-100" onclick="addToCart('Giày Thể Thao Cao Cấp Nam Bitis BSM003700XAM', '../img/giaythethao/gaiy8.webp', 979000)">THÊM VÀO GIỎ</button>
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Sandal Đế Xuồng BITTS SD03', '../img/sandal/sandal3.jpg', 1099000)">THÊM VÀO GIỎ</button>
             </div>
         </div>
     </div>
-</div>
+</div> <!-- Đóng thẻ row cho hàng 2 -->
+
+<div class="row"> <!-- Mở thẻ row mới cho hàng 3 -->
+    <!-- Hàng 3-->
+    <!-- Sản phẩm 9 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/sandal/sandal5.jpg" class="w-100" alt="">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-10%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Sandal Nam Da Bò BITTS SD05</h6>
+                <div class="mb-2">
+                    <span class="price">599,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">699,000đ</span>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                    <span class="text-muted">(38)</span>
+                </div> -->
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100"onclick="addToCart('Sandal Nam Da Bò BITTS SD05', '../img/sandal/sandal5.jpg', 599000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+    <!-- Sản phẩm 10  -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/dép/dep1.jpg" class="w-100" alt="Dép quai ngang Biti's">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-20%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Dép quai ngang Biti's DEP001NAU</h6>
+                <div class="mb-2 ">
+                    <span class="price">199,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">249,000đ</span>
+                </div>
+                <div class="d-flex justify-content-between">
+            
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100" onclick="addToCart('Dép quai ngang Bitis DEP001NAU', '../img/dép/dep1.jpg', 199000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sản phẩm 11 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/dép/dép3.jpg" class="w-100" alt="Dép thể thao Biti's">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-25%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Dép thể thao Biti's DEP003XANH</h6>
+                <div class="mb-2">
+                    <span class="price">224,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">299,000đ</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button class="btn btn-outline-primary w-100"  onclick="addToCart('Dép thể thao Bitis DEP003XANH', '../img/dép/dep3.jpg', 224000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+    <!-- Sản phẩm 12-->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="../img/dép/dep5.jpg" class="w-100" alt="Dép quai hậu Biti's">
+                <span class="position-absolute top-0 end-0 bg-danger text-white p-1 px-2 m-2 rounded">-15%</span>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Dép quai hậu Biti's DEP005HONG</h6>
+                <div class="mb-2">
+                    <span class="price">254,000đ</span>
+                    <span class="text-muted text-decoration-line-through ms-2">299,000đ</span>
+                </div>
+                <div class="d-flex justify-content-between">
+               
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <button  class="btn btn-outline-primary w-100" onclick="addToCart('Dép quai hậu Bitis DEP005HONG', '../img/dép/dep5.jpg', 154000)">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- Đóng thẻ row cho hàng 3 -->
+
 <a href="giohang.html" class="cart-floating-button">
     <i class="fas fa-shopping-cart"></i>
     <span class="cart-count">0</span> 
 </a>
-     <!-- Footer -->
-     <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -400,6 +509,6 @@
         </div>
     </footer>
    
-</div>
+
 </body>
 </html>
